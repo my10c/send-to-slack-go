@@ -1,0 +1,28 @@
+[auth]
+# user allowed to read the configuration file
+allowUsers	= ["root"]
+# file permissions of the configuration file
+allowMods	= ["0400", "0600"]
+
+[slack]
+token		= "x0x"
+# emoji to use for the user
+userEmoji   = ":badass:"
+# emoji to be used with the message; added at the begining
+# can be overwritten with the -e flag
+msgEmoji    = ":red-alert:"
+# the message will be posted as the give user below
+user		= "momo"
+channel		= "operations"
+# disable by default
+lock		= true
+lockFile	= "/tmp/send-to-slack.lock"
+
+[logconfig]
+# disable by default
+enableLog		= true
+logsDir			= "/tmp/logs"
+logFile			= "send-to-slack.log"
+logMaxSize		= 128
+logMaxBackups	= 28
+logMaxAge		= 28
